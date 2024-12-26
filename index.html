@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="icon" href="/images/logo.wepb" type="image/x-icon" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
@@ -27,7 +27,9 @@
       <div class="header__container container flex flex-between">
         <!-- Logo -->
         <div class="hover-scale header__logo text-black fw-700 heading-2">
-          <a href="index.html"> <img src="/images/logo.png" /> </a>
+          <a href="index.html">
+            <img loading="lazy" src="/images/logo.wepb" />
+          </a>
         </div>
 
         <!-- Nav list -->
@@ -47,7 +49,10 @@
         <!-- Header links -->
         <div class="header__links flex">
           <a href="contact-us.html">
-            <button class="header__button btn-primary hover-scale">
+            <button
+              aria-label="contact Us Header Button"
+              class="header__button btn-primary hover-scale"
+            >
               تواصل معنا
             </button>
           </a>
@@ -69,6 +74,7 @@
             aria-expanded="false"
             aria-label="Toggle menu"
           >
+            <p class="sr-only">Dropdown menu Button</p>
             <i class="header__menu-icon fa-solid fa-bars"></i>
           </button>
         </div>
@@ -79,7 +85,9 @@
         <div class="header__dropdown-menu flex flex-column">
           <div class="header__dropdown-header flex flex-between">
             <div class="hover-scale header__logo text-black fw-700 heading-2">
-              <a href="index.html"> <img src="/images/logo.png" /> </a>
+              <a href="index.html">
+                <img loading="lazy" src="/images/logo.wepb" />
+              </a>
             </div>
             <button class="header__dropdown-close heading-1 text-black-100">
               <i class="fa-solid fa-times"></i>
@@ -136,6 +144,7 @@
         <div class="hero__container container grid gap-xl">
           <div class="hero__image">
             <img
+              loading="lazy"
               src="images/669f963bacde2b3d1616ae82_profit.wepb"
               alt="hero image"
             />
@@ -402,64 +411,73 @@
               <!-- Each item -->
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-1.png"
+                  src="images/carousel/image-1.wepb"
                   alt="Partner 1 logo"
                 />
               </li>
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-2.png"
+                  src="images/carousel/image-2.wepb"
                   alt="Partner 2 logo"
                 />
               </li>
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-3.png"
+                  src="images/carousel/image-3.wepb"
                   alt="Partner 3 logo"
                 />
               </li>
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-4.png"
+                  src="images/carousel/image-4.wepb"
                   alt="Partner 4 logo"
                 />
               </li>
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-5.png"
+                  src="images/carousel/image-5.wepb"
                   alt="Partner 4 logo"
                 />
               </li>
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-6.png"
+                  src="images/carousel/image-6.wepb"
                   alt="Partner 4 logo"
                 />
               </li>
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-7.png"
+                  src="images/carousel/image-7.wepb"
                   alt="Partner 4 logo"
                 />
               </li>
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-8.png"
+                  src="images/carousel/image-8.wepb"
                   alt="Partner 4 logo"
                 />
               </li>
               <li class="partners__carousel-item" role="listitem">
                 <img
+                  loading="lazy"
                   class="partners__carousel-image"
-                  src="images/carousel/image-9.png"
+                  src="images/carousel/image-9.wepb"
                   alt="Partner 4 logo"
                 />
               </li>
@@ -1415,11 +1433,6 @@
           <!-- Company Addresses -->
           <div class="footer__company-addresses">
             <h3 class="footer__address-title">شركة ناصر فرج للمقاولات</h3>
-            <!-- <button
-              class="footer__address-details hover-scale text-white text-start"
-            >
-              الطائف - شارع شهار الرئيسي الرياض - عفيف طريق الملك عبدالعزيز
-            </button> -->
 
             <p class="footer__address-details text-white text-start">
               شارع الأميرة نورة بنت عبد الرحمن - حي الملك فهد - الدوادمي 17452 -
@@ -1431,7 +1444,11 @@
               rel="noopener noreferrer"
               class="footer__address-details hover-scale text-white text-start"
             >
-              <img src="/images/map-image.png" class="footer__address-image" />
+              <img
+                loading="lazy"
+                src="/images/map-image.wepb"
+                class="footer__address-image"
+              />
             </a>
           </div>
 
