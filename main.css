@@ -620,6 +620,9 @@ section {
 
 .header__dropdown-social-links {
   padding: 2rem;
+  font-size: var(--fs-heading-5);
+  font-weight: 700;
+  color: var(--clr-black);
 }
 
 @media (max-width: 60em) {
@@ -635,6 +638,13 @@ section {
     width: 100%;
     height: max-content;
     background-color: var(--clr-black-300);
+    color: var(--clr-white);
+  }
+
+  .header__dropdown-social-links {
+    padding: 2rem;
+    font-size: var(--fs-heading-5);
+    font-weight: 700;
     color: var(--clr-white);
   }
 }
@@ -965,6 +975,11 @@ footer h3 {
 .footer__social-icons > *:hover {
   color: var(--clr-primary);
   transform: scale(1.2);
+}
+
+.footer__address-image {
+  border-radius: var(--border-radius-lg);
+  transition: all 0.3s ease;
 }
 
 /* ----------------------- */
