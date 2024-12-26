@@ -17,6 +17,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="main.js" defer></script>
+
+    <!-- Add this script tag to include EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <title>شركة ناصر فرج للمقاولات والتطوير العقاري</title>
   </head>
   <body>
@@ -529,11 +535,6 @@
           <!-- Company Addresses -->
           <div class="footer__company-addresses">
             <h3 class="footer__address-title">شركة ناصر فرج للمقاولات</h3>
-            <!-- <button
-              class="footer__address-details hover-scale text-white text-start"
-            >
-              الطائف - شارع شهار الرئيسي الرياض - عفيف طريق الملك عبدالعزيز
-            </button> -->
 
             <a
               href="https://maps.app.goo.gl/9Z1B76wZ1Ad766i48?g_st=iwb"
@@ -627,4 +628,54 @@
       </div>
     </footer>
   </body>
+  <script>
+    // Initialize EmailJS
+    emailjs.init("FqfBwV5mB-eUP5sLa");
+    const form = document.querySelector("form");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form submission
+        // Collect form data
+        const formData = {
+          name: document.getElementById("name").value,
+          secondName: document.getElementById("second-name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          age: document.getElementById("age").value,
+          sector: document.querySelector('input[name="sector"]:checked')?.value,
+          profit: document.getElementById("profit").value,
+          product: document.getElementById("product-select").value,
+          area: document.getElementById("Area").value,
+          fundBeneficiary: document.querySelector(
+            'input[name="sector"]:checked'
+          )?.value,
+          termsAccepted: document.getElementById(
+            "Agree-to-the-terms-and-conditions"
+          ).checked,
+        };
+        console.log(formData);
+        // Validate required fields (example for simplicity)
+        if (!formData.name || !formData.email || !formData.termsAccepted) {
+          alert("Please fill all required fields and accept terms.");
+          return;
+        }
+
+        // Send email via EmailJS
+        emailjs
+          .send("service_bq0zxad", "template_zkpja9i", formData)
+          .then(() => {
+            alert("Your form has been submitted successfully!");
+            // Optionally reset the form
+            e.target.reset();
+          })
+          .catch((error) => {
+            console.error("Error sending email:", error);
+            alert(
+              "There was an error submitting the form. Please try again later."
+            );
+          });
+      });
+    }
+  </script>
 </html>
